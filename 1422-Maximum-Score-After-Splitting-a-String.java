@@ -3,7 +3,7 @@ class Solution {
         int maxScore = Integer.MIN_VALUE;
         int n = s.length();
         
-        // Iterate through each possible split point
+    
         for (int i = 1; i < n; i++) {
             // Split into left and right substrings
             String left = s.substring(0, i);
