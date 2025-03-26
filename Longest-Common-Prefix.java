@@ -3,6 +3,10 @@ class Solution {
         String prefix = strs[0];
     
     for(int i = 1 ; i<strs.length ; i++){
+        if(prefix == \\){
+            return \\;
+
+        }
             String tempstring = \\;
             int searchsize = Math.min(prefix.length(), strs[i].length());
             for(int j =0 ; j<searchsize ;j++){
