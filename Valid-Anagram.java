@@ -1,17 +1,12 @@
-class Solution {
-    public boolean isAnagram(String s, String t) {
-        int charcounts[] = new int[26];
-        if(s.length() != t.length()){
-            return false;
-        }
-        for(int i=0 ; i < s.length() ; i++){
-            charcounts[s.charAt(i) - 'a']++;
-            charcounts[t.charAt(i) - 'a']--;
-        }
-        for(int i=0 ; i < charcounts.length ; i++){
-        if(charcounts[i] != 0){
-            return false;
-        }} 
-        return true;
-    }
-}
+1class Solution {
+2    public boolean isAnagram(String s, String t) {
+3        if(s.length() != t.length()){
+4            return false;
+5        }
+6        char[] sarray = s.toCharArray();
+7        char[] tarray = t.toCharArray();
+8        Arrays.sort(sarray);
+9        Arrays.sort(tarray);
+10        return Arrays.equals(sarray,tarray);// check the content in the array 
+11    }
+12}
